@@ -1,21 +1,17 @@
 const mongoose = require('mongoose');
+const Medical = mongoose.Schema;
 
-const CustomerSchema = new mongoose.Schema(
+const admindata= new mongoose.Schema(
     {
-        Name:{
-            type:String,
-            require:true
-      
-        },
-        Email:{
+        email:{
             type:String,
             require:true
         },
-        Password:{
+        password:{
             type:String,
             require:true,
         },
         
     });
 
-module.exports = mongoose.model("RegisterationData" , CustomerSchema);
+module.exports = mongoose.model("admindata" , admindata);
